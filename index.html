@@ -19,17 +19,55 @@
 			margin: auto;
 			width: max-content;
 		}
-		.wrap {
+		.swiper-wrapper {
 			position: relative;
-			width: 1040px;
-			height: 250px;
+			width: 345px;
+			height: 265px;
 		}
+
 		.swiper-container {
-			/* width: 315px; */
-			width: 900px;
+			width: 315px;
 			height: 100%;
-			/* height: auto; */
 		}
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			border-radius: 4px;
+			background-color: #00a0e9;
+			height: 80px;
+			width: 30px;
+			top: 0 !important;
+			bottom: 0 !important;
+			margin: auto 0;
+		}
+
+		.swiper-button-prev {
+			left: 0px;
+		}
+		.swiper-button-next {
+			right: 0px;
+		}
+
+		.swiper-button-prev:after,
+		.swiper-button-next:after {
+			color: #fff;
+			font-size: 1rem;
+		}
+		@media screen and (min-width: 768px) {
+			.swiper-wrapper {
+				width: 1040px;
+				height: 252px;
+			}
+			.swiper-container {
+				width: 900px;
+			}
+			.swiper-button-next,
+			.swiper-button-prev {
+				height: 120px;
+				width: 40px;
+			}
+		}
+
 		.swiper-slide:first-child {
 			background-image: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
 		}
@@ -45,51 +83,9 @@
 		.swiper-slide:nth-child(5) {
 			background-image: url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
 		}
-		.swiper-button-next,
-		.swiper-button-prev {
-			border-radius: 4px;
-			background-color: #00a0e9;
-			/* padding: 34px 12px; */
-			/* padding: 40px 6px; */
-			height: 120px;
-			width: 40px;
-			margin: 0;
-			top: 0 !important;
-			bottom: 0 !important;
-			margin: auto 0;
-			/* right: -25px; */
-		}
-		.swiper-button-prev {
-			left: 0px;
-		}
-		.swiper-button-next {
-			right: 0px;
-		}
-		.swiper-button-prev:after,
-		.swiper-button-next:after {
-			color: #fff;
-			font-size: 1rem;
-		}
-		.swiper-slide {
-			max-width: 270px;
-			max-height: 252px;
-		}
 	</style>
 	<body>
-		<!-- <div class="wrap">
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"></div>
-					<div class="swiper-slide"></div>
-					<div class="swiper-slide"></div>
-				</div>
-			</div>
-			<div class="swiper-button-next"></div>
-		</div>
- -->
-
-		<div class="wrap">
+		<div class="swiper-wrapper">
 			<div class="swiper-button-prev"></div>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
@@ -106,20 +102,17 @@
 
 		<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-		<!-- <script>
-			const swiper = new Swiper('.swiper-container', {
-				// Navigation arrows
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
-			});
-		</script> -->
 
 		<script>
 			var swiper = new Swiper('.swiper-container', {
-				slidesPerView: 4,
-				spaceBetween: 30,
+				slidesPerView: 1,
+				spaceBetween: 0,
+				breakpoints: {
+					768: {
+						slidesPerView: 4,
+						spaceBetween: 30,
+					},
+				},
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
