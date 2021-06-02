@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+		<title>Document</title>
+	</head>
+	<style>
+		body {
+			display: flex;
+			height: 100vh;
+			align-items: center;
+			margin: auto;
+			width: max-content;
+		}
+		.wrap {
+			position: relative;
+			width: 1040px;
+			height: 250px;
+		}
+		.swiper-container {
+			/* width: 315px; */
+			width: 900px;
+			height: 100%;
+			/* height: auto; */
+		}
+		.swiper-slide:first-child {
+			background-image: url('https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+		}
+		.swiper-slide:nth-child(2) {
+			background-image: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1033&q=80');
+		}
+		.swiper-slide:nth-child(3) {
+			background-image: url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=787&q=80');
+		}
+		.swiper-slide:nth-child(4) {
+			background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+		}
+		.swiper-slide:nth-child(5) {
+			background-image: url('https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+		}
+		.swiper-button-next,
+		.swiper-button-prev {
+			border-radius: 4px;
+			background-color: #00a0e9;
+			/* padding: 34px 12px; */
+			/* padding: 40px 6px; */
+			height: 120px;
+			width: 40px;
+			margin: 0;
+			top: 0 !important;
+			bottom: 0 !important;
+			margin: auto 0;
+			/* right: -25px; */
+		}
+		.swiper-button-prev {
+			left: 0px;
+		}
+		.swiper-button-next {
+			right: 0px;
+		}
+		.swiper-button-prev:after,
+		.swiper-button-next:after {
+			color: #fff;
+			font-size: 1rem;
+		}
+		.swiper-slide {
+			max-width: 270px;
+			max-height: 252px;
+		}
+	</style>
+	<body>
+		<!-- <div class="wrap">
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+				</div>
+			</div>
+			<div class="swiper-button-next"></div>
+		</div>
+ -->
+
+		<div class="wrap">
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+					<div class="swiper-slide"></div>
+				</div>
+			</div>
+			<div class="swiper-button-next"></div>
+		</div>
+
+		<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<!-- <script>
+			const swiper = new Swiper('.swiper-container', {
+				// Navigation arrows
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		</script> -->
+
+		<script>
+			var swiper = new Swiper('.swiper-container', {
+				slidesPerView: 4,
+				spaceBetween: 30,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		</script>
+	</body>
+</html>
